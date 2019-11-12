@@ -36,4 +36,24 @@ public class DecimalToRomanNumeralTest {
         check(3, "III");
     }
 
+    @Test
+    void fourIsIV() {
+        check(4, "IV");
+    }
+
+    @Test
+    void fiveIsV() {
+        check(5, "V");
+    }
+
+    @Test
+    void eightIsVIII() {
+        check(8, "VIII");
+    }
+
+    @Test
+    void nineIsIX() {
+        check(9, "IX");
+    }
+
 }
