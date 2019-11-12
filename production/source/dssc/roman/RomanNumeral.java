@@ -9,21 +9,27 @@ public class RomanNumeral {
 
     @Override
     public String toString() {
-        int decimalDigit = decimal / 10;
-        int unitDigit = decimal % 10;
+        int tensDigit = decimal / 10;
+        int unitsDigit = decimal % 10;
         String result = "";
 
-        if(decimalDigit < 4) {
-            result += "X".repeat(decimalDigit);
+        if (tensDigit < 4) {
+            result += "X".repeat(tensDigit);
+        } else if (tensDigit == 4) {
+            result += "XL";
+        } else if (tensDigit < 9) {
+            result += "L".concat("X".repeat(tensDigit-5));
+        } else if (tensDigit == 9) {
+            result += "XC";
         } else result += "";
 
-        if (unitDigit < 4) {
-            result += "I".repeat(unitDigit);
-        } else if (unitDigit == 4) {
+        if (unitsDigit < 4) {
+            result += "I".repeat(unitsDigit);
+        } else if (unitsDigit == 4) {
             result += "IV";
-        } else if (unitDigit < 9) {
-            result += "V".concat("I".repeat(unitDigit-5));
-        } else if (unitDigit == 9) {
+        } else if (unitsDigit < 9) {
+            result += "V".concat("I".repeat(unitsDigit-5));
+        } else if (unitsDigit == 9) {
             result += "IX";
         } else result += "";
 

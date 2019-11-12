@@ -71,8 +71,23 @@ public class DecimalToRomanNumeralTest {
     }
 
     @Test
-    void twentynineIsXXIX() {
-        check(29, "XXIX");
+    void thirtynineIsXXXIX() {
+        check(39, "XXXIX");
+    }
+
+    @Test
+    void fortyfiveIsXLV() {
+        check(45, "XLV");
+    }
+
+    @Test
+    void fiftynineIsLIX() {
+        check(59, "LIX");
+    }
+
+    @Test
+    void ninetytwoIsXCII() {
+        check(92, "XCII");
     }
 
 }
