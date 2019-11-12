@@ -17,6 +17,13 @@ public class RomanNumeral {
             return "IV";
         } else if (decimal < 9) {
             return "V".concat("I".repeat(decimal-5));
-        } else return "IX";
+        } else if (decimal == 9) {
+            return "IX";
+        } else if (decimal == 10) {
+            return "X";
+        } else if (decimal < 14) {
+            return "X".concat("I".repeat(decimal-10));
+        } else return "";
+
     }
 }

@@ -56,4 +56,19 @@ public class DecimalToRomanNumeralTest {
         check(9, "IX");
     }
 
+    @Test
+    void tenIsX() {
+        check(10, "X");
+    }
+
+    @Test
+    void elevenIsXI() {
+        check(11, "XI");
+    }
+
+    @Test
+    void thirteenIsXIII() {
+        check(13, "XIII");
+    }
+
 }
