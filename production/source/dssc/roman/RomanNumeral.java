@@ -9,21 +9,24 @@ public class RomanNumeral {
 
     @Override
     public String toString() {
-        if (decimal == 0) {
-            return "";
-        } else if (decimal < 4) {
-            return "I".repeat(decimal);
-        } else if (decimal == 4) {
-            return "IV";
-        } else if (decimal < 9) {
-            return "V".concat("I".repeat(decimal-5));
-        } else if (decimal == 9) {
-            return "IX";
-        } else if (decimal == 10) {
-            return "X";
-        } else if (decimal < 14) {
-            return "X".concat("I".repeat(decimal-10));
-        } else return "";
+        int decimalDigit = decimal / 10;
+        int unitDigit = decimal % 10;
+        String result = "";
 
+        if(decimalDigit < 4) {
+            result += "X".repeat(decimalDigit);
+        } else result += "";
+
+        if (unitDigit < 4) {
+            result += "I".repeat(unitDigit);
+        } else if (unitDigit == 4) {
+            result += "IV";
+        } else if (unitDigit < 9) {
+            result += "V".concat("I".repeat(unitDigit-5));
+        } else if (unitDigit == 9) {
+            result += "IX";
+        } else result += "";
+
+        return result;
     }
 }

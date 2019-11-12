@@ -1,7 +1,6 @@
 package test.roman;
 
 import dssc.roman.RomanNumeral;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -69,6 +68,11 @@ public class DecimalToRomanNumeralTest {
     @Test
     void thirteenIsXIII() {
         check(13, "XIII");
+    }
+
+    @Test
+    void twentynineIsXXIX() {
+        check(29, "XXIX");
     }
 
 }
