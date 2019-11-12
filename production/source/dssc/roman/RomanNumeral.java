@@ -9,10 +9,12 @@ public class RomanNumeral {
 
     @Override
     public String toString() {
-        if (this.decimal == 0) {
+        if (decimal == 0) {
             return "";
-        } else {
+        } else if (decimal == 1) {
             return "I";
+        } else {
+            return "II";
         }
     }
 }
