@@ -104,4 +104,14 @@ public class DecimalToRomanNumeralTest {
     void randomThreeDigits() {
         check(572, "DLXXII");
     }
+
+    @Test
+    void onethousandIsM() {
+        check(1000, "M");
+    }
+
+    @Test
+    void largestNumber() {
+        check(3999, "MMMCMXCIX");
+    }
 }
