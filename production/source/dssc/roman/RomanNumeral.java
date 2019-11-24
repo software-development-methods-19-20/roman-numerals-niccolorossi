@@ -9,29 +9,14 @@ public class RomanNumeral {
 
     @Override
     public String toString() {
+
+        String[] units = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+        String[] tens = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+
         int tensDigit = decimal / 10;
         int unitsDigit = decimal % 10;
-        String result = "";
 
-        if (tensDigit < 4) {
-            result += "X".repeat(tensDigit);
-        } else if (tensDigit == 4) {
-            result += "XL";
-        } else if (tensDigit < 9) {
-            result += "L".concat("X".repeat(tensDigit-5));
-        } else if (tensDigit == 9) {
-            result += "XC";
-        } else result += "";
-
-        if (unitsDigit < 4) {
-            result += "I".repeat(unitsDigit);
-        } else if (unitsDigit == 4) {
-            result += "IV";
-        } else if (unitsDigit < 9) {
-            result += "V".concat("I".repeat(unitsDigit-5));
-        } else if (unitsDigit == 9) {
-            result += "IX";
-        } else result += "";
+        String result = tens[tensDigit] + units[unitsDigit];
 
         return result;
     }
