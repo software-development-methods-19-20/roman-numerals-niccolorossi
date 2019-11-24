@@ -90,4 +90,9 @@ public class DecimalToRomanNumeralTest {
         check(92, "XCII");
     }
 
+    @Test
+    void ninetynineIsXCIX() {
+        check(99, "XCIX");
+    }
+
 }
