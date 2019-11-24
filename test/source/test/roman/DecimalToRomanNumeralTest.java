@@ -95,4 +95,13 @@ public class DecimalToRomanNumeralTest {
         check(99, "XCIX");
     }
 
+    @Test
+    void onehundredIsC() {
+        check(100, "C");
+    }
+
+    @Test
+    void randomThreeDigits() {
+        check(572, "DLXXII");
+    }
 }
